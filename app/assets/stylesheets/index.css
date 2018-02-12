@@ -1,0 +1,27 @@
+.books-box{
+	padding: 30px 0 20px 30px;
+}
+.books{
+	font-size: 26px;
+}
+table{
+	font-size: 13px;
+	padding-top: 10px;
+}
+.in-title, .in-body{
+	padding: 0 10px;
+}
+.index-show-bt, .index-edit-bt, .index-destroy-bt{
+	text-decoration: underline;
+	padding: 0 5px;
+}
+
+.new-box{
+	padding-left: 30px;
+}
+.new-book{
+	font-size: 20px;
+}
+.new-title, .new-body{
+	font-size: 13px;
+}

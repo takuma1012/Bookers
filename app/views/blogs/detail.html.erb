@@ -1,0 +1,15 @@
+<div class="detail">
+	<div class="detail-box1">
+		<strong class="detail-title">Title:</strong>
+			<%= @blog.title %>
+	</div>
+	<div class="detail-box2">
+		<strong class="detail-body">Body:</strong>
+			<%= @blog.body %>
+	</div>
+
+	<div class="detail-command-box">
+		<a class="detail-edit-bt"<%= link_to 'Edit', edit_blog_path(@blog) %></a> |
+		<a class="detail-back-bt"<%= link_to 'Back', blogs_path(@blog) %></a>
+	</div>
+</div>

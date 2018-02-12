@@ -1,0 +1,18 @@
+<div class="edit">
+	<strong class="editing-book">Editing Book</strong>
+	<%= form_for(@blog) do |f| %>
+
+		<p class="edit-title"> Title</p>
+		<%= f.text_field :title %>
+
+		<p class="edit-body"> Body</p>
+		<%= f.text_area :body %>
+
+		<p><%= f.submit 'Update Book' %></p>
+
+	<% end %>
+	<div class="edit-command-box">
+		<a class="edit-show-bt"<%= link_to 'Show', show_path(@blog) %></a>|
+		<a class="edit-back-bt"<%= link_to 'Back', blogs_path(@blog) %></a>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="books-box">
+	<strong class="books">Books</strong>
+	<table>
+		<tr>
+			<th>Title</th>
+			<th>Body</th>
+		</tr>
+	<% @blogs.each do |blog| %>
+		<tr>
+			<td class="in-title"><%= blog.title %></td>
+			<td class="in-body"><%= blog.body %></td>
+			<td class="index-show-bt">
+				<%= link_to 'Show', show_path(blog) %></td>
+			<td class="index-edit-bt">
+				<%= link_to 'Edit', edit_blog_path(blog) %></td>
+			<td class="index-destroy-bt">
+				<%= link_to 'Destroy', blog_path(blog),
+					method: :delete, data: { confirm: 'Are you sure?'} %></td>
+		</tr>
+	<% end %>
+	</table>
+</div>
+
+<div class="new-box">
+	<strong class="new-book">New book</strong>
+	<%= form_for(@blog) do |f| %>
+
+		<p class="new-title"> Title</p>
+		<%= f.text_field :title %>
+
+		<p class="new-body"> Body</p>
+		<%= f.text_area :body %>
+
+		<p><%= f.submit 'Create Book' %></p>
+
+	<% end %>
+</div>
