@@ -28,6 +28,10 @@ a{
 	clear: both;
 }
 
+.alert{
+	text-align: center;
+}
+
 @import url("top.css");
 
 @import url("index.css");

@@ -1,3 +1,9 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
 <div class="books-box">
 	<strong class="books">Books</strong>
 	<table>
@@ -10,7 +16,7 @@
 			<td class="in-title"><%= blog.title %></td>
 			<td class="in-body"><%= blog.body %></td>
 			<td class="index-show-bt">
-				<%= link_to 'Show', show_path(blog) %></td>
+				<%= link_to 'Show', blog_path(blog) %></td>
 			<td class="index-edit-bt">
 				<%= link_to 'Edit', edit_blog_path(blog) %></td>
 			<td class="index-destroy-bt">
